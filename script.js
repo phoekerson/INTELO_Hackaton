@@ -140,9 +140,9 @@ function updateProjectsDisplay() {
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card fade-in';
             projectCard.innerHTML = `
-                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">${project.name}</h4>
+                <h4 style="color: rgba(255, 255, 255, 0.9); margin-bottom: 0.5rem;">${project.name}</h4>
                 <p style="margin-bottom: 1rem; color: var(--text-muted);">${project.description}</p>
-                ${project.link ? `<a href="${project.link}" target="_blank" style="color: var(--accent-color); text-decoration: none;">Voir le projet →</a>` : ''}
+                ${project.link ? `<a href="${project.link}" target="_blank" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Voir le projet →</a>` : ''}
             `;
             projectsGrid.appendChild(projectCard);
         }, index * 200);
