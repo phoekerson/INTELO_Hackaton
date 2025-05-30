@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Développeur Dynamique</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Particules animées -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Arrière-plan animé -->
+    <div class="animated-bg"></div>
+
+    <div class="header">
+        <h1>Portfolio Développeur Dynamique</h1>
+        <p>Créez votre portfolio professionnel avec des animations spectaculaires</p>
+    </div>
+
+    <div class="container">
+        <!-- Section Formulaire -->
+        <div class="form-section">
+            <h2>Vos Informations</h2>
+            <form id="portfolioForm">
+                <div class="form-group">
+                    <label for="fullName">Nom Complet</label>
+                    <input type="text" id="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Biographie</label>
+                    <textarea id="bio" rows="4" placeholder="Parlez-nous de vous..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Compétences (séparées par des virgules)</label>
+                    <input type="text" id="skills" placeholder="JavaScript, React, Node.js, Python...">
+                </div>
+
+                <div class="form-group">
+                    <label for="projectName">Nom du Projet</label>
+                    <input type="text" id="projectName">
+                </div>
+
+                <div class="form-group">
+                    <label for="projectDesc">Description du Projet</label>
+                    <textarea id="projectDesc" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectLink">Lien GitHub/Démo</label>
+                    <input type="url" id="projectLink">
+                </div>
+
+                <div class="form-group">
+                    <label for="github">Profil GitHub</label>
+                    <input type="url" id="github" placeholder="https://github.com/votre-nom">
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedin">Profil LinkedIn</label>
+                    <input type="url" id="linkedin" placeholder="https://linkedin.com/in/votre-nom">
+                </div>
+
+                <button type="button" class="btn" onclick="updatePortfolio()">Mettre à jour le Portfolio</button>
+                <button type="button" class="btn" onclick="addProject()">Ajouter un Projet</button>
+                <button type="button" class="btn" onclick="resetPortfolio()">Réinitialiser</button>
+            </form>
+        </div>
+
+        <!-- Section Aperçu -->
+        <div class="preview-section">
+            <h2>Aperçu du Portfolio</h2>
+            <div class="loader" id="loader"></div>
+            
+            <div class="profile-card" id="profileCard">
+                <div class="profile-name" id="displayName">Votre Nom</div>
+                <div class="profile-bio" id="displayBio">Votre biographie apparaîtra ici...</div>
+                
+                <div class="skills-section" style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Compétences</h3>
+                    <div class="skills-container" id="skillsContainer">
+                        <!-- Les badges de compétences apparaîtront ici -->
+                    </div>
+                </div>
+
+                <div class="social-links" id="socialLinks">
+                    <!-- Les liens sociaux apparaîtront ici -->
+                </div>
+            </div>
+
+            <div class="projects-section">
+                <h3 style="color: var(--secondary-color); margin-bottom: 1rem; text-align: center;">Projets</h3>
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Les projets apparaîtront ici -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
